@@ -9,10 +9,4 @@
         android:src="@drawable/apple_mobileme"
         android:layout_gravity="center"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ImNo Forecast"
-        android:textColor="@android:color/white"/>
-
 </LinearLayout>
