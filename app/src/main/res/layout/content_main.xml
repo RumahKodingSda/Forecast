@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="net.idekreasi.forecast.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:background="@color/orangePrimary">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/lokasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lokasi"
+            android:textColor="@android:color/white"
+            android:textSize="22dp"/>
+
+
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/white_balance_sunny"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="50dp"/>
+
+        <TextView
+            android:id="@+id/now"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/suhu"
+            android:textColor="@android:color/white"
+            android:textSize="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="160dp" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/temperature_celsius"
+            android:tint="#FFF"
+            android:layout_gravity="center"
+            android:layout_marginLeft="40dp" />
+
+        <TextView
+            android:id="@+id/deskripsi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tgl"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="160dp"
+            android:layout_marginTop="30dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/relativeLayout">
+            <!-- LINGKARAN PERTAMA -->
+
+            <ImageView
+                android:id="@+id/circle1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/circle"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="20dp" />
+
+                    <FrameLayout
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/circle"
+                        android:tint="#FFF"
+                        android:layout_above="@+id/textView2"
+                        android:layout_toLeftOf="@+id/circle2"
+                        android:layout_toStartOf="@+id/circle2">
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/circle"
+                            android:tint="#FFF"
+                            android:id="@+id/imageView4" />
+                        <ImageView
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:src="@drawable/oil_temperature"
+                            android:tint="#FF9800"
+                            android:layout_gravity="center"
+                            android:id="@+id/imageView9" />
+                    </FrameLayout>
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1024"
+                android:textColor="#FFF"
+                android:textSize="15dp"
+                android:layout_gravity="bottom"
+                android:id="@+id/textView2"
+                android:paddingLeft="7dp"
+                android:layout_alignBaseline="@+id/textView"
+                android:layout_alignBottom="@+id/textView"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <!-- LINGKARAN KEDUA -->
+
+            <ImageView
+                android:id="@+id/circle2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/circle"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/circle1"/>
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/circle"
+                android:layout_gravity="bottom"
+                android:tint="#FFF"
+                android:id="@+id/imageView8"
+                android:layout_above="@+id/textView"
+                android:layout_alignRight="@+id/circle2"
+                android:layout_alignEnd="@+id/circle2" />
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:src="@drawable/weather_windy"
+                android:tint="#FF9800"
+                android:layout_gravity="bottom"
+                android:layout_marginRight="5dp"
+                android:id="@+id/imageView7"
+                android:layout_alignTop="@+id/circle2"
+                android:layout_alignRight="@+id/circle2"
+                android:layout_alignEnd="@+id/circle2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4"
+                android:textColor="#FFF"
+                android:textSize="15dp"
+                android:layout_gravity="bottom"
+                android:id="@+id/textView4"
+                android:layout_alignBaseline="@+id/textView"
+                android:layout_alignBottom="@+id/textView"
+                android:layout_toLeftOf="@+id/imageView8"
+                android:layout_toStartOf="@+id/imageView8" />
+
+            <!-- LINGKARAN KETIGA -->
+
+            <ImageView
+                android:id="@+id/circle3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/circle"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/circle2"/>
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/circle"
+                android:layout_gravity="bottom"
+                android:tint="#FFF"
+                android:id="@+id/imageView2"
+                android:layout_alignTop="@+id/imageView5"
+                android:layout_toLeftOf="@+id/imageView6"
+                android:layout_toStartOf="@+id/imageView6" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/apple_mobileme"
+                android:tint="#FF9800"
+                android:layout_gravity="bottom"
+                android:id="@+id/imageView"
+                android:layout_alignBottom="@+id/imageView9"
+                android:layout_alignRight="@+id/circle3"
+                android:layout_alignEnd="@+id/circle3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="56%"
+                android:textColor="#FFF"
+                android:textSize="15dp"
+                android:id="@+id/textView"
+                android:layout_below="@+id/imageView2"
+                android:layout_toLeftOf="@+id/imageView"
+                android:layout_toStartOf="@+id/imageView" />
+
+            <!-- LINGKARAN KEEMPAT -->
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/circle"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/circle3"
+                        android:id="@+id/imageView6" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/circle"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:tint="#FFF"
+                        android:id="@+id/imageView5"
+                        android:layout_alignBottom="@+id/imageView"
+                        android:layout_alignRight="@+id/imageView6"
+                        android:layout_alignEnd="@+id/imageView6" />
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/water"
+                        android:tint="#FF9800"
+                        android:id="@+id/imageView3"
+                        android:layout_alignBottom="@+id/imageView7"
+                        android:layout_alignRight="@+id/textView3"
+                        android:layout_alignEnd="@+id/textView3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100%"
+                android:textColor="#FFF"
+                android:textSize="15dp"
+                android:layout_gravity="bottom|center_horizontal"
+                android:id="@+id/textView3"
+                android:layout_alignBaseline="@+id/textView"
+                android:layout_alignBottom="@+id/textView"
+                android:layout_alignRight="@+id/imageView6"
+                android:layout_alignEnd="@+id/imageView6" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+    </FrameLayout>
+
+    <!-- CUACA HARI SELANJUTNYA -->
+
+    <ScrollView
+        android:id="@+id/nextDay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_below="@+id/frame">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- CUACA HARI PERTAMA -->
+            <RelativeLayout
+                android:id="@+id/day1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/cuaca_kamis"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/weather_partlycloudy"
+                    android:tint="@color/orangePrimary"
+                    android:layout_marginRight="8dp"/>
+
+                <TextView
+                    android:id="@+id/cuaca_kam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cuacakam"
+                    android:textColor="@color/grey"
+                    android:layout_toRightOf="@+id/cuaca_kamis"/>
+
+                <TextView
+                    android:id="@+id/suhu_kamis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/suhu"
+                    android:layout_below="@+id/cuaca_kam"
+                    android:layout_toRightOf="@+id/cuaca_kamis"/>
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/temperature_celsius"
+                    android:layout_toRightOf="@+id/suhu_kamis"
+                    android:tint="@color/grey"
+                    android:layout_below="@+id/cuaca_kam"/>
+
+                <TextView
+                    android:id="@+id/kamis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/kamis"
+                    android:textColor="@color/grey"
+                    android:layout_alignParentRight="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tgl_kam"
+                    android:textColor="@color/grey"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/kamis"/>
+
+            </RelativeLayout>
+            <!-- CUACA HARI KEDUA -->
+            <RelativeLayout
+                android:id="@+id/day2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/day1">
+
+                <ImageView
+                    android:id="@+id/cuaca_jumat"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/white_balance_sunny"
+                    android:tint="@color/orangePrimary"
+                    android:layout_marginRight="8dp"/>
+
+                <TextView
+                    android:id="@+id/cuaca_jum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cuacajum"
+                    android:textColor="@color/grey"
+                    android:layout_toRightOf="@+id/cuaca_jumat"/>
+
+                <TextView
+                    android:id="@+id/suhu_jumat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/suhu"
+                    android:layout_below="@+id/cuaca_jum"
+                    android:layout_toRightOf="@+id/cuaca_jumat"/>
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/temperature_celsius"
+                    android:layout_toRightOf="@+id/suhu_jumat"
+                    android:tint="@color/grey"
+                    android:layout_below="@+id/cuaca_jum"/>
+
+                <TextView
+                    android:id="@+id/jumat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/jumat"
+                    android:textColor="@color/grey"
+                    android:layout_alignParentRight="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tgl_jum"
+                    android:textColor="@color/grey"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/jumat"/>
+
+            </RelativeLayout>
+            <!-- CUACA HARI KETIGA -->
+            <RelativeLayout
+                android:id="@+id/day3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/day2">
+
+                <!-- CUACA HARI JUMAT -->
+                <ImageView
+                    android:id="@+id/cuaca_sabtu"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/weather_pouring"
+                    android:tint="@color/blue"
+                    android:layout_marginRight="8dp"/>
+
+                <TextView
+                    android:id="@+id/cuaca_sab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cuacasab"
+                    android:textColor="@color/grey"
+                    android:layout_toRightOf="@+id/cuaca_sabtu"/>
+
+                <TextView
+                    android:id="@+id/suhu_sabtu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/suhu"
+                    android:layout_below="@+id/cuaca_sab"
+                    android:layout_toRightOf="@+id/cuaca_sabtu"/>
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/temperature_celsius"
+                    android:layout_toRightOf="@+id/suhu_sabtu"
+                    android:tint="@color/grey"
+                    android:layout_below="@+id/cuaca_sab"/>
+
+                <TextView
+                    android:id="@+id/sabtu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sabtu"
+                    android:textColor="@color/grey"
+                    android:layout_alignParentRight="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tgl_sab"
+                    android:textColor="@color/grey"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/sabtu"/>
+
+            </RelativeLayout>
+            <!-- CUACA HARI KEEMPAT -->
+            <RelativeLayout
+                android:id="@+id/day4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/day3">
+
+                <!-- CUACA HARI SABTU-->
+                <ImageView
+                    android:id="@+id/cuaca_minggu"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/white_balance_sunny"
+                    android:tint="@color/orangePrimary"
+                    android:layout_marginRight="8dp"/>
+
+                <TextView
+                    android:id="@+id/cuaca_min"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cuacamin"
+                    android:textColor="@color/grey"
+                    android:layout_toRightOf="@+id/cuaca_minggu"/>
+
+                <TextView
+                    android:id="@+id/suhu_minggu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/suhu"
+                    android:layout_below="@+id/cuaca_min"
+                    android:layout_toRightOf="@+id/cuaca_minggu"/>
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/temperature_celsius"
+                    android:layout_toRightOf="@+id/suhu_minggu"
+                    android:tint="@color/grey"
+                    android:layout_below="@+id/cuaca_min"/>
+
+                <TextView
+                    android:id="@+id/minggu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/minggu"
+                    android:textColor="@color/grey"
+                    android:layout_alignParentRight="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tgl_min"
+                    android:textColor="@color/grey"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/minggu"/>
+
+            </RelativeLayout>
+            <!-- CUACA HARI KELIMA -->
+            <RelativeLayout
+                android:id="@+id/day5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/day4">
+
+                <ImageView
+                    android:id="@+id/cuaca_senin"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/weather_rainy"
+                    android:tint="@color/blue"
+                    android:layout_marginRight="8dp"/>
+
+                <TextView
+                    android:id="@+id/cuaca_sen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cuacasen"
+                    android:textColor="@color/grey"
+                    android:layout_toRightOf="@+id/cuaca_senin"/>
+
+                <TextView
+                    android:id="@+id/suhu_senin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/suhu"
+                    android:layout_below="@+id/cuaca_sen"
+                    android:layout_toRightOf="@+id/cuaca_senin"/>
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/temperature_celsius"
+                    android:layout_toRightOf="@+id/suhu_senin"
+                    android:tint="@color/grey"
+                    android:layout_below="@+id/cuaca_sen"/>
+
+                <TextView
+                    android:id="@+id/minggu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/minggu"
+                    android:textColor="@color/grey"
+                    android:layout_alignParentRight="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tgl_min"
+                    android:textColor="@color/grey"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/minggu"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
