@@ -1,3 +1,27 @@
 <resources>
     <string name="app_name">Forecast</string>
+    <string name="action_settings">Settings</string>
+    <string name="lokasi">Prambon, Sidoarjo</string>
+    <string name="suhu">28</string>
+    <string name="time">16:04</string>
+    <string name="tgl">RABU, 15 JUNI</string>
+    <string name="kelembaban">100%</string>
+    <string name="kamis">KAMIS</string>
+    <string name="cuacakam">CERAH BERAWAN</string>
+    <string name="tgl_kam">16 JUNI</string>
+    <string name="jumat">JUMAT</string>
+    <string name="cuacajum">CERAH</string>
+    <string name="tgl_jum">17 JUNI</string>
+    <string name="sabtu">SABTU</string>
+    <string name="cuacasab">HUJAN LEBAT</string>
+    <string name="tgl_sab">18 JUNI</string>
+    <string name="minggu">MINGGU</string>
+    <string name="cuacamin">CERAH</string>
+    <string name="tgl_min">19 JUNI</string>
+    <string name="senin">SENIN</string>
+    <string name="cuacasen">HUJAN RINGAN</string>
+    <string name="tgl_sen">20 JUNI</string>
+    <string name="selasa">SELASA</string>
+    <string name="cuacasel">CERAH BERAWAN</string>
+    <string name="tgl_sel">21 JUNI</string>
 </resources>
