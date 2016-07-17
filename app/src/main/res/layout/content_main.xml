@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,265 +9,285 @@
     tools:context="net.idekreasi.forecast.MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <FrameLayout
+    <LinearLayout
         android:id="@+id/frame"
         android:layout_width="match_parent"
         android:layout_height="230dp"
-        android:background="@color/orangePrimary">
+        android:background="@color/orangePrimary"
+        android:orientation="vertical">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-        </RelativeLayout>
         <TextView
             android:id="@+id/lokasi"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textAlignment="center"
             android:text="@string/lokasi"
             android:textColor="@android:color/white"
-            android:textSize="22dp"/>
+            android:textSize="24sp" />
 
-
-        <ImageView
-            android:id="@+id/imgLogo"
+        <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/white_balance_sunny"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="50dp"/>
+            android:layout_gravity="center">
 
-        <TextView
-            android:id="@+id/now"
+            <ImageView
+                android:id="@+id/imgLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:src="@drawable/white_balance_sunny" />
+
+            <TextView
+                android:id="@+id/now"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/imgLogo"
+                android:layout_centerVertical="true"
+                android:text="@string/suhu"
+                android:textColor="@android:color/white"
+                android:textSize="48dp" />
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_toRightOf="@id/now"
+                android:layout_marginLeft="-20dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/temperature_celsius"
+                android:tint="#FFF" />
+
+            <TextView
+                android:id="@+id/deskripsi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/imgLogo"
+                android:layout_alignBottom="@id/imgLogo"
+                android:layout_marginBottom="10dp"
+                android:text="@string/tgl"
+                android:textColor="@android:color/white" />
+        </RelativeLayout>
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/suhu"
-            android:textColor="@android:color/white"
-            android:textSize="40dp"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="160dp" />
-
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/temperature_celsius"
-            android:tint="#FFF"
-            android:layout_gravity="center"
-            android:layout_marginLeft="40dp" />
-
-        <TextView
-            android:id="@+id/deskripsi"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/tgl"
-            android:textColor="@android:color/white"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="160dp"
-            android:layout_marginTop="30dp" />
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal">
 
             <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:id="@+id/relativeLayout1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp">
 
-                <RelativeLayout
+                <FrameLayout
+                    android:id="@+id/lingkaranBesar1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_centerHorizontal="true"
-                    android:id="@+id/relativeLayout">
-            <!-- LINGKARAN PERTAMA -->
-
-            <ImageView
-                android:id="@+id/circle1"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/circle"
-                android:layout_gravity="bottom"
-                android:layout_marginTop="20dp" />
-
-                    <FrameLayout
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:src="@drawable/circle"
-                        android:tint="#FFF"
-                        android:layout_above="@+id/textView2"
-                        android:layout_toLeftOf="@+id/circle2"
-                        android:layout_toStartOf="@+id/circle2">
-                        <ImageView
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:src="@drawable/circle"
-                            android:tint="#FFF"
-                            android:id="@+id/imageView4" />
-                        <ImageView
-                            android:layout_width="12dp"
-                            android:layout_height="12dp"
-                            android:src="@drawable/oil_temperature"
-                            android:tint="#FF9800"
-                            android:layout_gravity="center"
-                            android:id="@+id/imageView9" />
-                    </FrameLayout>
-
-
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1024"
-                android:textColor="#FFF"
-                android:textSize="15dp"
-                android:layout_gravity="bottom"
-                android:id="@+id/textView2"
-                android:paddingLeft="7dp"
-                android:layout_alignBaseline="@+id/textView"
-                android:layout_alignBottom="@+id/textView"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
-
-            <!-- LINGKARAN KEDUA -->
-
-            <ImageView
-                android:id="@+id/circle2"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/circle"
-                android:layout_gravity="bottom"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="20dp"
-                android:layout_toRightOf="@+id/circle1"/>
-
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:src="@drawable/circle"
-                android:layout_gravity="bottom"
-                android:tint="#FFF"
-                android:id="@+id/imageView8"
-                android:layout_above="@+id/textView"
-                android:layout_alignRight="@+id/circle2"
-                android:layout_alignEnd="@+id/circle2" />
-
-            <ImageView
-                android:layout_width="12dp"
-                android:layout_height="12dp"
-                android:src="@drawable/weather_windy"
-                android:tint="#FF9800"
-                android:layout_gravity="bottom"
-                android:layout_marginRight="5dp"
-                android:id="@+id/imageView7"
-                android:layout_alignTop="@+id/circle2"
-                android:layout_alignRight="@+id/circle2"
-                android:layout_alignEnd="@+id/circle2" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="4"
-                android:textColor="#FFF"
-                android:textSize="15dp"
-                android:layout_gravity="bottom"
-                android:id="@+id/textView4"
-                android:layout_alignBaseline="@+id/textView"
-                android:layout_alignBottom="@+id/textView"
-                android:layout_toLeftOf="@+id/imageView8"
-                android:layout_toStartOf="@+id/imageView8" />
-
-            <!-- LINGKARAN KETIGA -->
-
-            <ImageView
-                android:id="@+id/circle3"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/circle"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="10dp"
-                android:layout_toRightOf="@+id/circle2"/>
-
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:src="@drawable/circle"
-                android:layout_gravity="bottom"
-                android:tint="#FFF"
-                android:id="@+id/imageView2"
-                android:layout_alignTop="@+id/imageView5"
-                android:layout_toLeftOf="@+id/imageView6"
-                android:layout_toStartOf="@+id/imageView6" />
-
-            <ImageView
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:src="@drawable/apple_mobileme"
-                android:tint="#FF9800"
-                android:layout_gravity="bottom"
-                android:id="@+id/imageView"
-                android:layout_alignBottom="@+id/imageView9"
-                android:layout_alignRight="@+id/circle3"
-                android:layout_alignEnd="@+id/circle3" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="56%"
-                android:textColor="#FFF"
-                android:textSize="15dp"
-                android:id="@+id/textView"
-                android:layout_below="@+id/imageView2"
-                android:layout_toLeftOf="@+id/imageView"
-                android:layout_toStartOf="@+id/imageView" />
-
-            <!-- LINGKARAN KEEMPAT -->
+                    android:layout_marginTop="-16dp"
+                    android:layout_marginRight="-16dp"
+                    android:layout_below="@id/lingkaranKecil1">
 
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/circle"
-                        android:layout_gravity="bottom|center_horizontal"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_toRightOf="@+id/circle3"
-                        android:id="@+id/imageView6" />
+                        android:src="@drawable/circle" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="1024"
+                        android:textColor="#FFF"
+                        android:textSize="15dp" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/lingkaranKecil1"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_toRightOf="@id/lingkaranBesar1"
+                    android:src="@drawable/circle"
+                    android:tint="#FFF">
 
                     <ImageView
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:src="@drawable/circle"
-                        android:layout_gravity="bottom|center_horizontal"
-                        android:tint="#FFF"
-                        android:id="@+id/imageView5"
-                        android:layout_alignBottom="@+id/imageView"
-                        android:layout_alignRight="@+id/imageView6"
-                        android:layout_alignEnd="@+id/imageView6" />
+                        android:tint="#FFF" />
 
                     <ImageView
-                        android:layout_width="15dp"
-                        android:layout_height="15dp"
-                        android:src="@drawable/water"
-                        android:tint="#FF9800"
-                        android:id="@+id/imageView3"
-                        android:layout_alignBottom="@+id/imageView7"
-                        android:layout_alignRight="@+id/textView3"
-                        android:layout_alignEnd="@+id/textView3" />
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/oil_temperature"
+                        android:tint="#FF9800" />
+                </FrameLayout>
+            </RelativeLayout>
 
-            <TextView
+            <RelativeLayout
+                android:id="@+id/relativeLayout2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="100%"
-                android:textColor="#FFF"
-                android:textSize="15dp"
-                android:layout_gravity="bottom|center_horizontal"
-                android:id="@+id/textView3"
-                android:layout_alignBaseline="@+id/textView"
-                android:layout_alignBottom="@+id/textView"
-                android:layout_alignRight="@+id/imageView6"
-                android:layout_alignEnd="@+id/imageView6" />
+                android:padding="4dp">
 
-                </RelativeLayout>
+                <FrameLayout
+                    android:id="@+id/lingkaranBesar2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-16dp"
+                    android:layout_below="@id/lingkaranKecil2">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/circle" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="1024"
+                        android:textColor="#FFF"
+                        android:textSize="15dp" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/lingkaranKecil2"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="-16dp"
+                    android:layout_toRightOf="@id/lingkaranBesar2"
+                    android:src="@drawable/circle"
+                    android:tint="#FFF">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/circle"
+                        android:tint="#FFF" />
+
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/oil_temperature"
+                        android:tint="#FF9800" />
+                </FrameLayout>
 
             </RelativeLayout>
 
-    </FrameLayout>
+            <RelativeLayout
+                android:id="@+id/relativeLayout3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp">
+
+                <FrameLayout
+                    android:id="@+id/lingkaranBesar3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-16dp"
+                    android:layout_below="@id/lingkaranKecil3">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/circle" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="1024"
+                        android:textColor="#FFF"
+                        android:textSize="15dp" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/lingkaranKecil3"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="-16dp"
+                    android:layout_toRightOf="@id/lingkaranBesar3"
+                    android:src="@drawable/circle"
+                    android:tint="#FFF">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/circle"
+                        android:tint="#FFF" />
+
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/oil_temperature"
+                        android:tint="#FF9800" />
+                </FrameLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp">
+
+                <FrameLayout
+                    android:id="@+id/lingkaranBesar4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-16dp"
+                    android:layout_below="@id/lingkaranKecil4">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/circle" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="1024"
+                        android:textColor="#FFF"
+                        android:textSize="15dp" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/lingkaranKecil4"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="-16dp"
+                    android:layout_toRightOf="@id/lingkaranBesar4"
+                    android:src="@drawable/circle"
+                    android:tint="#FFF">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/circle"
+                        android:tint="#FFF" />
+
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/oil_temperature"
+                        android:tint="#FF9800" />
+                </FrameLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
 
     <!-- CUACA HARI SELANJUTNYA -->
 
@@ -274,8 +295,8 @@
         android:id="@+id/nextDay"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:layout_below="@+id/frame">
+        android:layout_below="@+id/frame"
+        android:padding="10dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -291,49 +312,49 @@
                     android:id="@+id/cuaca_kamis"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
+                    android:layout_marginRight="8dp"
                     android:src="@drawable/weather_partlycloudy"
-                    android:tint="@color/orangePrimary"
-                    android:layout_marginRight="8dp"/>
+                    android:tint="@color/orangePrimary" />
 
                 <TextView
                     android:id="@+id/cuaca_kam"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/cuaca_kamis"
                     android:text="@string/cuacakam"
-                    android:textColor="@color/grey"
-                    android:layout_toRightOf="@+id/cuaca_kamis"/>
+                    android:textColor="@color/grey" />
 
                 <TextView
                     android:id="@+id/suhu_kamis"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/suhu"
                     android:layout_below="@+id/cuaca_kam"
-                    android:layout_toRightOf="@+id/cuaca_kamis"/>
+                    android:layout_toRightOf="@+id/cuaca_kamis"
+                    android:text="@string/suhu" />
 
                 <ImageView
                     android:layout_width="16dp"
                     android:layout_height="16dp"
-                    android:src="@drawable/temperature_celsius"
+                    android:layout_below="@+id/cuaca_kam"
                     android:layout_toRightOf="@+id/suhu_kamis"
-                    android:tint="@color/grey"
-                    android:layout_below="@+id/cuaca_kam"/>
+                    android:src="@drawable/temperature_celsius"
+                    android:tint="@color/grey" />
 
                 <TextView
                     android:id="@+id/kamis"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
                     android:text="@string/kamis"
-                    android:textColor="@color/grey"
-                    android:layout_alignParentRight="true"/>
+                    android:textColor="@color/grey" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/tgl_kam"
-                    android:textColor="@color/grey"
                     android:layout_alignParentRight="true"
-                    android:layout_below="@+id/kamis"/>
+                    android:layout_below="@+id/kamis"
+                    android:text="@string/tgl_kam"
+                    android:textColor="@color/grey" />
 
             </RelativeLayout>
             <!-- CUACA HARI KEDUA -->
@@ -341,56 +362,56 @@
                 android:id="@+id/day2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_below="@+id/day1">
+                android:layout_below="@+id/day1"
+                android:layout_marginTop="20dp">
 
                 <ImageView
                     android:id="@+id/cuaca_jumat"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
+                    android:layout_marginRight="8dp"
                     android:src="@drawable/white_balance_sunny"
-                    android:tint="@color/orangePrimary"
-                    android:layout_marginRight="8dp"/>
+                    android:tint="@color/orangePrimary" />
 
                 <TextView
                     android:id="@+id/cuaca_jum"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/cuaca_jumat"
                     android:text="@string/cuacajum"
-                    android:textColor="@color/grey"
-                    android:layout_toRightOf="@+id/cuaca_jumat"/>
+                    android:textColor="@color/grey" />
 
                 <TextView
                     android:id="@+id/suhu_jumat"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/suhu"
                     android:layout_below="@+id/cuaca_jum"
-                    android:layout_toRightOf="@+id/cuaca_jumat"/>
+                    android:layout_toRightOf="@+id/cuaca_jumat"
+                    android:text="@string/suhu" />
 
                 <ImageView
                     android:layout_width="16dp"
                     android:layout_height="16dp"
-                    android:src="@drawable/temperature_celsius"
+                    android:layout_below="@+id/cuaca_jum"
                     android:layout_toRightOf="@+id/suhu_jumat"
-                    android:tint="@color/grey"
-                    android:layout_below="@+id/cuaca_jum"/>
+                    android:src="@drawable/temperature_celsius"
+                    android:tint="@color/grey" />
 
                 <TextView
                     android:id="@+id/jumat"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
                     android:text="@string/jumat"
-                    android:textColor="@color/grey"
-                    android:layout_alignParentRight="true"/>
+                    android:textColor="@color/grey" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/tgl_jum"
-                    android:textColor="@color/grey"
                     android:layout_alignParentRight="true"
-                    android:layout_below="@+id/jumat"/>
+                    android:layout_below="@+id/jumat"
+                    android:text="@string/tgl_jum"
+                    android:textColor="@color/grey" />
 
             </RelativeLayout>
             <!-- CUACA HARI KETIGA -->
@@ -398,57 +419,57 @@
                 android:id="@+id/day3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_below="@+id/day2">
+                android:layout_below="@+id/day2"
+                android:layout_marginTop="20dp">
 
                 <!-- CUACA HARI JUMAT -->
                 <ImageView
                     android:id="@+id/cuaca_sabtu"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
+                    android:layout_marginRight="8dp"
                     android:src="@drawable/weather_pouring"
-                    android:tint="@color/blue"
-                    android:layout_marginRight="8dp"/>
+                    android:tint="@color/blue" />
 
                 <TextView
                     android:id="@+id/cuaca_sab"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/cuaca_sabtu"
                     android:text="@string/cuacasab"
-                    android:textColor="@color/grey"
-                    android:layout_toRightOf="@+id/cuaca_sabtu"/>
+                    android:textColor="@color/grey" />
 
                 <TextView
                     android:id="@+id/suhu_sabtu"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/suhu"
                     android:layout_below="@+id/cuaca_sab"
-                    android:layout_toRightOf="@+id/cuaca_sabtu"/>
+                    android:layout_toRightOf="@+id/cuaca_sabtu"
+                    android:text="@string/suhu" />
 
                 <ImageView
                     android:layout_width="16dp"
                     android:layout_height="16dp"
-                    android:src="@drawable/temperature_celsius"
+                    android:layout_below="@+id/cuaca_sab"
                     android:layout_toRightOf="@+id/suhu_sabtu"
-                    android:tint="@color/grey"
-                    android:layout_below="@+id/cuaca_sab"/>
+                    android:src="@drawable/temperature_celsius"
+                    android:tint="@color/grey" />
 
                 <TextView
                     android:id="@+id/sabtu"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
                     android:text="@string/sabtu"
-                    android:textColor="@color/grey"
-                    android:layout_alignParentRight="true"/>
+                    android:textColor="@color/grey" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/tgl_sab"
-                    android:textColor="@color/grey"
                     android:layout_alignParentRight="true"
-                    android:layout_below="@+id/sabtu"/>
+                    android:layout_below="@+id/sabtu"
+                    android:text="@string/tgl_sab"
+                    android:textColor="@color/grey" />
 
             </RelativeLayout>
             <!-- CUACA HARI KEEMPAT -->
@@ -456,57 +477,57 @@
                 android:id="@+id/day4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_below="@+id/day3">
+                android:layout_below="@+id/day3"
+                android:layout_marginTop="20dp">
 
                 <!-- CUACA HARI SABTU-->
                 <ImageView
                     android:id="@+id/cuaca_minggu"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
+                    android:layout_marginRight="8dp"
                     android:src="@drawable/white_balance_sunny"
-                    android:tint="@color/orangePrimary"
-                    android:layout_marginRight="8dp"/>
+                    android:tint="@color/orangePrimary" />
 
                 <TextView
                     android:id="@+id/cuaca_min"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/cuaca_minggu"
                     android:text="@string/cuacamin"
-                    android:textColor="@color/grey"
-                    android:layout_toRightOf="@+id/cuaca_minggu"/>
+                    android:textColor="@color/grey" />
 
                 <TextView
                     android:id="@+id/suhu_minggu"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/suhu"
                     android:layout_below="@+id/cuaca_min"
-                    android:layout_toRightOf="@+id/cuaca_minggu"/>
+                    android:layout_toRightOf="@+id/cuaca_minggu"
+                    android:text="@string/suhu" />
 
                 <ImageView
                     android:layout_width="16dp"
                     android:layout_height="16dp"
-                    android:src="@drawable/temperature_celsius"
+                    android:layout_below="@+id/cuaca_min"
                     android:layout_toRightOf="@+id/suhu_minggu"
-                    android:tint="@color/grey"
-                    android:layout_below="@+id/cuaca_min"/>
+                    android:src="@drawable/temperature_celsius"
+                    android:tint="@color/grey" />
 
                 <TextView
                     android:id="@+id/minggu"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
                     android:text="@string/minggu"
-                    android:textColor="@color/grey"
-                    android:layout_alignParentRight="true"/>
+                    android:textColor="@color/grey" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/tgl_min"
-                    android:textColor="@color/grey"
                     android:layout_alignParentRight="true"
-                    android:layout_below="@+id/minggu"/>
+                    android:layout_below="@+id/minggu"
+                    android:text="@string/tgl_min"
+                    android:textColor="@color/grey" />
 
             </RelativeLayout>
             <!-- CUACA HARI KELIMA -->
@@ -514,56 +535,56 @@
                 android:id="@+id/day5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_below="@+id/day4">
+                android:layout_below="@+id/day4"
+                android:layout_marginTop="20dp">
 
                 <ImageView
                     android:id="@+id/cuaca_senin"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
+                    android:layout_marginRight="8dp"
                     android:src="@drawable/weather_rainy"
-                    android:tint="@color/blue"
-                    android:layout_marginRight="8dp"/>
+                    android:tint="@color/blue" />
 
                 <TextView
                     android:id="@+id/cuaca_sen"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/cuaca_senin"
                     android:text="@string/cuacasen"
-                    android:textColor="@color/grey"
-                    android:layout_toRightOf="@+id/cuaca_senin"/>
+                    android:textColor="@color/grey" />
 
                 <TextView
                     android:id="@+id/suhu_senin"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/suhu"
                     android:layout_below="@+id/cuaca_sen"
-                    android:layout_toRightOf="@+id/cuaca_senin"/>
+                    android:layout_toRightOf="@+id/cuaca_senin"
+                    android:text="@string/suhu" />
 
                 <ImageView
                     android:layout_width="16dp"
                     android:layout_height="16dp"
-                    android:src="@drawable/temperature_celsius"
+                    android:layout_below="@+id/cuaca_sen"
                     android:layout_toRightOf="@+id/suhu_senin"
-                    android:tint="@color/grey"
-                    android:layout_below="@+id/cuaca_sen"/>
+                    android:src="@drawable/temperature_celsius"
+                    android:tint="@color/grey" />
 
                 <TextView
                     android:id="@+id/minggu"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
                     android:text="@string/minggu"
-                    android:textColor="@color/grey"
-                    android:layout_alignParentRight="true"/>
+                    android:textColor="@color/grey" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/tgl_min"
-                    android:textColor="@color/grey"
                     android:layout_alignParentRight="true"
-                    android:layout_below="@+id/minggu"/>
+                    android:layout_below="@+id/minggu"
+                    android:text="@string/tgl_min"
+                    android:textColor="@color/grey" />
 
             </RelativeLayout>
 
