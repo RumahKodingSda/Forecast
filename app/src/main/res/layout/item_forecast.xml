@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/day1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/cuaca_kamis"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/weather_partlycloudy"
+            android:tint="@color/orangePrimary" />
+
+        <TextView
+            android:id="@+id/cuaca_kam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/cuaca_kamis"
+            android:text="@string/cuacakam"
+            android:textColor="@color/grey" />
+
+        <TextView
+            android:id="@+id/suhu_kamis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cuaca_kam"
+            android:layout_toRightOf="@+id/cuaca_kamis"
+            android:text="@string/suhu" />
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_below="@+id/cuaca_kam"
+            android:layout_toRightOf="@+id/suhu_kamis"
+            android:src="@drawable/temperature_celsius"
+            android:tint="@color/grey" />
+
+        <TextView
+            android:id="@+id/kamis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="@string/kamis"
+            android:textColor="@color/grey" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/kamis"
+            android:text="@string/tgl_kam"
+            android:textColor="@color/grey" />
+
+    </RelativeLayout>
+
+</LinearLayout>
