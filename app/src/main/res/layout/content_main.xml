@@ -16,15 +16,31 @@
         android:background="@color/orangePrimary"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/lokasi"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="@string/lokasi"
-            android:textAlignment="center"
-            android:textColor="@android:color/white"
-            android:textSize="24sp" />
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/lokasi"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="8dp"
+                android:gravity="end"
+                android:text="Sidoarjo,"
+                android:textColor="@android:color/white"
+                android:textSize="24sp" />
+            <TextView
+                android:id="@+id/cuaca"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="8dp"
+                android:text="Dingin"
+                android:textColor="@android:color/white"
+                android:textSize="24sp" />
+        </LinearLayout>
+
 
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -39,7 +55,7 @@
                 android:src="@drawable/white_balance_sunny" />
 
             <TextView
-                android:id="@+id/now"
+                android:id="@+id/suhu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
@@ -53,7 +69,7 @@
                 android:layout_height="32dp"
                 android:layout_marginLeft="-20dp"
                 android:layout_marginTop="10dp"
-                android:layout_toRightOf="@id/now"
+                android:layout_toRightOf="@+id/suhu"
                 android:src="@drawable/temperature_celsius"
                 android:tint="#FFF" />
 
